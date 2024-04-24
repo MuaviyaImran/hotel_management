@@ -19,7 +19,7 @@ const Home = ({ data }: Props) => {
   const searchParams = useSearchParams();
   const location = searchParams.get("location");
 
-  const { resPerPage = 8, filteredRoomsCount, rooms } = data;
+  const { resPerPage, filteredRoomsCount, rooms } = data;
   return (
     <div>
       <section id="rooms" className="container mt-5">
