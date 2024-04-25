@@ -86,7 +86,7 @@ const Invoice = ({ data }: Props) => {
                   <tr>
                     <td className="service">{booking?.room?.name}</td>
                     <td className="desc">
-                      €{booking?.room?.pricePerNight.toLocaleString("de-DE")}
+                      £{booking?.room?.pricePerNight.toLocaleString("de-DE")}
                     </td>
                     <td className="unit">
                       {new Date(booking?.checkInDate).toLocaleDateString(
@@ -108,7 +108,7 @@ const Invoice = ({ data }: Props) => {
                       <b>GRAND TOTAL</b>
                     </td>
                     <td className="grand total">
-                      <b>€{booking?.amountPaid.toLocaleString("de-DE")}</b>
+                      <b>£{booking?.amountPaid.toLocaleString("de-DE")}</b>
                     </td>
                   </tr>
                 </tbody>

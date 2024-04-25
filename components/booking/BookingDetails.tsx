@@ -47,7 +47,7 @@ const BookingDetails = ({ data }: Props) => {
               </tr>
               <tr>
                 <th scope="row">Amount Paid:</th>
-                <td>€{booking?.amountPaid.toLocaleString("de-DE")}</td>
+                <td>£{booking?.amountPaid.toLocaleString("de-DE")}</td>
               </tr>
             </tbody>
           </table>

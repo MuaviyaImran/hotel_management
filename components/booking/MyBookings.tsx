@@ -61,7 +61,7 @@ const MyBookings = ({ data }: Props) => {
         id: booking._id,
         checkIn: new Date(booking.checkInDate).toLocaleDateString("de-DE"),
         checkOut: new Date(booking.checkOutDate).toLocaleDateString("de-DE"),
-        amountpaid: `€${booking.amountPaid}`,
+        amountpaid: `£${booking.amountPaid}`,
         daysOfStay: booking.daysOfStay,
         actions: (
           <>
