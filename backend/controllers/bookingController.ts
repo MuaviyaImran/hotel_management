@@ -5,6 +5,7 @@ import Moment from "moment";
 import { extendMoment } from "moment-range";
 import ErrorHandler from "../utils/errorHandler";
 import mongoose from "mongoose";
+import { calculateDaysOfStay } from "@/helpers/helpers";
 
 const moment = extendMoment(Moment);
 
@@ -290,9 +291,14 @@ export const editBooking = catchAsyncErrors(
     if (!booking) {
       throw new ErrorHandler(404, "Room not found with this ID");
     }
+    const amountPerNight = body.amountPaid / body.daysOfStay;
+    const daysOfStay = calculateDaysOfStay(body.checkInDate, body.checkOutDate);
+    const newAmount = amountPerNight * daysOfStay;
 
     booking.checkInDate = body.checkInDate;
     booking.checkOutDate = body.checkOutDate;
+    booking.daysOfStay = daysOfStay;
+    booking.amountPaid = newAmount;
 
     await booking.save();
     return NextResponse.json({
