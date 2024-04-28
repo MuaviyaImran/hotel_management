@@ -42,6 +42,7 @@ body {
   width: 80px;
   height: 80px;
 }
+
 .lds-ellipsis div {
   position: absolute;
   top: 33px;
@@ -51,42 +52,52 @@ body {
   background: #e61e4d;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
+
 .lds-ellipsis div:nth-child(1) {
   left: 8px;
   animation: lds-ellipsis1 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(2) {
   left: 8px;
   animation: lds-ellipsis2 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(3) {
   left: 32px;
   animation: lds-ellipsis2 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(4) {
   left: 56px;
   animation: lds-ellipsis3 0.6s infinite;
 }
+
 @keyframes lds-ellipsis1 {
   0% {
     transform: scale(0);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 @keyframes lds-ellipsis3 {
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0);
   }
 }
+
 @keyframes lds-ellipsis2 {
   0% {
     transform: translate(0, 0);
   }
+
   100% {
     transform: translate(24px, 0);
   }
@@ -98,6 +109,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -107,6 +119,7 @@ body {
   from {
     -webkit-transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(360deg);
   }
@@ -139,6 +152,7 @@ body {
   width: 16px;
   height: 16px;
 }
+
 .lds-dual-ring:after {
   content: " ";
   display: block;
@@ -149,10 +163,12 @@ body {
   border-color: #fff transparent #fff transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -418,4 +434,38 @@ footer {
   border-color: #f3f4f6;
   border-radius: 0.3rem;
   color: #e61e4d;
+}
+
+/* aboutus */
+
+.aboutus,
+.contact {
+  margin-top: 100px !important;
+}
+
+.about_company,
+.team {
+  padding: 60px 30px;
+}
+
+.about_info {
+  letter-spacing: 40;
+}
+
+.carousel-inner {
+  min-height: 400px !important;
+  max-height: 400px !important;
+}
+
+.connect {
+  font-size: 44px !important;
+  padding: 5px 8px;
+}
+
+/* end of about us */
+
+/* header-mid-menu-links */
+.header-mid-menu-links {
+  color: black;
+  margin: 0 10px;
 }

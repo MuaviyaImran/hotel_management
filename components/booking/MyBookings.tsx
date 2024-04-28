@@ -12,7 +12,7 @@ interface Props {
 
 const MyBookings = ({ data }: Props) => {
   const bookings = data?.bookings;
-  console.log(bookings);
+
   const setBookins = () => {
     const data: { columns: any[]; rows: any[] } = {
       columns: [
@@ -90,6 +90,7 @@ const MyBookings = ({ data }: Props) => {
         className="px-3"
         bordered
         striped
+        noBottomColumns
         hover
       />
     </div>

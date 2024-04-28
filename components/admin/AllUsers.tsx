@@ -75,7 +75,8 @@ const AllUsers = ({ data }: Props) => {
           <>
             <Link
               href={`/admin/users/${user._id}`}
-              className="btn btn-outline-primary">
+              className="btn btn-outline-primary"
+            >
               {" "}
               <i className="fa fa-pencil"></i>{" "}
             </Link>
@@ -83,7 +84,8 @@ const AllUsers = ({ data }: Props) => {
             <button
               className="btn btn-outline-danger mx-2"
               disabled={isLoading}
-              onClick={() => deleteUserHandler(user?._id)}>
+              onClick={() => deleteUserHandler(user?._id)}
+            >
               <i className="fa fa-trash"></i>
             </button>
           </>
@@ -103,7 +105,14 @@ const AllUsers = ({ data }: Props) => {
       <h1 className="my-5">
         {users?.length} {users?.length === 1 ? "User" : "Users"}
       </h1>
-      <MDBDataTable data={setUsers()} className="px-3" bordered striped hover />
+      <MDBDataTable
+        data={setUsers()}
+        noBottomColumns
+        className="px-3"
+        bordered
+        striped
+        hover
+      />
     </div>
   );
 };

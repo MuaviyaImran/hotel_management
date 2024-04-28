@@ -75,7 +75,8 @@ const RoomReviews = () => {
             <button
               className="btn btn-outline-danger mx-2"
               disabled={isLoading}
-              onClick={() => deleteReviewHandler(review?._id)}>
+              onClick={() => deleteReviewHandler(review?._id)}
+            >
               <i className="fa fa-trash"></i>
             </button>
           </>
@@ -106,7 +107,8 @@ const RoomReviews = () => {
 
             <button
               className="btn form-btn w-100 py-2 mt-3"
-              onClick={getRoomReviewsHandler}>
+              onClick={getRoomReviewsHandler}
+            >
               Fetch Reviews
             </button>
           </div>
@@ -119,6 +121,7 @@ const RoomReviews = () => {
           className="px-3"
           bordered
           striped
+          noBottomColumns
           hover
         />
       ) : (

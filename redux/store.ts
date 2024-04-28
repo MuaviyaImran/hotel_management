@@ -4,6 +4,7 @@ import { authApi } from "./api/authApi";
 import { userApi } from "./api/userApi";
 import { bookingApi } from "./api/bookingApi";
 import { roomApi } from "./api/roomApi";
+import { contactusApi } from "./api/contactusApi";
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
     [userApi.reducerPath]: userApi.reducer,
     [bookingApi.reducerPath]: bookingApi.reducer,
     [roomApi.reducerPath]: roomApi.reducer,
+    [contactusApi.reducerPath]: contactusApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat([
@@ -19,6 +21,7 @@ export const store = configureStore({
       userApi.middleware,
       bookingApi.middleware,
       roomApi.middleware,
+      contactusApi.middleware
     ]),
 });
 

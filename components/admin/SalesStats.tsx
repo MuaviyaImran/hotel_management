@@ -16,8 +16,9 @@ const SalesStats = ({ data }: Props) => {
             <div className="row">
               <div className="col-2">
                 <i
-                  className="fas fa-dollar-sign fa-4x"
-                  style={{ color: "#dbdee4" }}></i>
+                  className="fa-solid fa-sterling-sign fa-4x"
+                  style={{ color: "#dbdee4" }}
+                ></i>
               </div>
               <div className="col-10">
                 <p className="card-title">Sales</p>
@@ -36,7 +37,8 @@ const SalesStats = ({ data }: Props) => {
               <div className="col-2">
                 <i
                   className="fas fa-file-invoice fa-4x"
-                  style={{ color: "#dbdee4" }}></i>
+                  style={{ color: "#dbdee4" }}
+                ></i>
               </div>
               <div className="col-10">
                 <p className="card-title">Bookings</p>

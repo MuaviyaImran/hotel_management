@@ -145,7 +145,6 @@ export const resetPassword = catchAsyncErrors(
         "Password reset token is invalid or has expired"
       );
     }
-    console.log(body.password, body.confirmPassword);
 
     if (body.password !== body.confirmedPassword) {
       throw new ErrorHandler(400, "Passwords do not match");

@@ -38,7 +38,17 @@ const Header = () => {
             </a>
           </div>
         </div>
-
+        <div className="d-flex gap-">
+          <Link href="/" className="header-mid-menu-links">
+            <span>Home</span>
+          </Link>
+          <Link href="/about" className="header-mid-menu-links">
+            <span>About Us</span>
+          </Link>
+          <Link href="/contact" className="header-mid-menu-links">
+            <span>Contact Us</span>
+          </Link>
+        </div>
         <div className="col-6 col-lg-3 mt-3 mt-md-0 text-end">
           {user ? (
             <div className="ml-4 dropdown d-line">

@@ -27,7 +27,7 @@ export const catchAsyncErrors =
         error.message = `Duplicate ${Object.keys(error.keyValue)} entered`;
         error.statusCode = 400;
       }
-
+      console.log(error);
       return NextResponse.json(
         {
           errMessage: error.message,

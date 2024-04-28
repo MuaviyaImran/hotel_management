@@ -37,12 +37,8 @@ const ResetPassword = ({ token }: Props) => {
       password,
       confirmedPassword,
     };
-    console.log(passwords);
 
     resetPassword({ token, body: passwords });
-
-    // setPassword("");
-    // setConfirmedPassword("");
   };
 
   return (
@@ -85,7 +81,8 @@ const ResetPassword = ({ token }: Props) => {
             <button
               type="submit"
               className="btn form-btn w-100 py-2"
-              disabled={isLoading}>
+              disabled={isLoading}
+            >
               {isLoading ? <ButtonLoader /> : "Set Password"}
             </button>
           </form>

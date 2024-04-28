@@ -65,20 +65,23 @@ const AllBookings = ({ data }: Props) => {
           <>
             <Link
               href={`/bookings/${booking._id}`}
-              className="btn btn-outline-primary">
+              className="btn btn-outline-primary"
+            >
               {" "}
               <i className="fa fa-eye"></i>{" "}
             </Link>
             <Link
               href={`/bookings/invoice/${booking._id}`}
-              className="btn btn-outline-success ms-2">
+              className="btn btn-outline-success ms-2"
+            >
               {" "}
               <i className="fa fa-receipt"></i>{" "}
             </Link>
             <button
               className="btn btn-outline-danger mx-2"
               disabled={isLoading}
-              onClick={() => deleteBookingHandler(booking?._id)}>
+              onClick={() => deleteBookingHandler(booking?._id)}
+            >
               <i className="fa fa-trash"></i>
             </button>
           </>
@@ -103,6 +106,7 @@ const AllBookings = ({ data }: Props) => {
         className="px-3"
         bordered
         striped
+        noBottomColumns
         hover
       />
     </div>

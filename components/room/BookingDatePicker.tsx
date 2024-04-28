@@ -88,7 +88,6 @@ const BookingDatePicker = ({ room }: Props) => {
       daysOfStay,
       amount,
     };
-    console.log(room?._id, checkoutData);
     newBooking(checkoutData);
   };
 

@@ -98,7 +98,7 @@ export const getRoomBookedDates = catchAsyncErrors(async (req: NextRequest) => {
 // Get currently logged in user bookings   =>   /api/bookings/me
 export const myBookings = catchAsyncErrors(async (req: NextRequest) => {
   const bookings = await Booking.find({ user: req.user._id });
-  console.log(bookings);
+
   return NextResponse.json({
     bookings,
   });

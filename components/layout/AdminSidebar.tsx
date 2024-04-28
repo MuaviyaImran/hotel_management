@@ -37,6 +37,12 @@ const AdminSidebar = () => {
       icon: "fas fa-star",
       url: "/admin/reviews",
     },
+    {
+      id: 5,
+      name: "Contact",
+      icon: "fas fa-phone",
+      url: "/admin/contact",
+    },
   ];
 
   const [activeMenuItem, setActiveMenuItem] = useState(pathname);
@@ -55,7 +61,8 @@ const AdminSidebar = () => {
             activeMenuItem.includes(item.url) ? "active" : ""
           }`}
           aria-current={activeMenuItem.includes(item.url) ? "true" : "false"}
-          onClick={() => handleMenuItemClick(item.url)}>
+          onClick={() => handleMenuItemClick(item.url)}
+        >
           <i className={`${item.icon} menu-item-icon-1 fa-fw pe-2`}></i>{" "}
           {item.name}
         </Link>

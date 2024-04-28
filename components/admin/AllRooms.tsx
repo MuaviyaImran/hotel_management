@@ -61,19 +61,22 @@ const AllRooms = ({ data }: Props) => {
           <>
             <Link
               href={`/admin/rooms/${room._id}`}
-              className="btn btn-outline-primary">
+              className="btn btn-outline-primary"
+            >
               {" "}
               <i className="fa fa-pencil"></i>{" "}
             </Link>
             <Link
               href={`/admin/rooms/${room._id}/upload_images`}
-              className="btn btn-outline-success ms-2">
+              className="btn btn-outline-success ms-2"
+            >
               {" "}
               <i className="fa fa-images"></i>{" "}
             </Link>
             <button
               className="btn btn-outline-danger ms-2"
-              onClick={() => deleteRoomHandler(room._id)}>
+              onClick={() => deleteRoomHandler(room._id)}
+            >
               {" "}
               <i className="fa fa-trash"></i>{" "}
             </button>
@@ -96,12 +99,20 @@ const AllRooms = ({ data }: Props) => {
         `}
         <Link
           href="/admin/rooms/new"
-          className="mt-0 btn text-white position-absolute end-0 form-btn">
+          className="mt-0 btn text-white position-absolute end-0 form-btn"
+        >
           Create Room
         </Link>
       </h1>
 
-      <MDBDataTable data={setRooms()} className="px-3" bordered striped hover />
+      <MDBDataTable
+        data={setRooms()}
+        className="px-3"
+        bordered
+        noBottomColumns
+        striped
+        hover
+      />
     </div>
   );
 };

@@ -38,7 +38,6 @@ const NewReview = ({ roomId }: { roomId: string }) => {
     };
     postReview(reviewData);
   };
-  console.log("new Review", canReview);
 
   return (
     <>
