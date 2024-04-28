@@ -88,7 +88,9 @@ const BookingDatePicker = ({ room }: Props) => {
       daysOfStay,
       amount,
     };
-    newBooking(checkoutData);
+    newBooking(checkoutData).then((res) => {
+      router.push(`/bookings/me`);
+    });
   };
 
   return (

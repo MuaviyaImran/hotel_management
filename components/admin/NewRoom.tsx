@@ -101,7 +101,8 @@ const NewRoom = () => {
         <form
           className="shadow rounded bg-body"
           onSubmit={submitHandler}
-          encType="multipart/form-data">
+          encType="multipart/form-data"
+        >
           <h2 className="mb-4">New Room</h2>
           <div className="mb-3">
             <label htmlFor="name_field" className="form-label">
@@ -142,7 +143,8 @@ const NewRoom = () => {
               name="description"
               value={description}
               onChange={onChange}
-              required></textarea>
+              required
+            ></textarea>
           </div>
           <div className="mb-3">
             <label htmlFor="address_field" className="form-label">
@@ -168,8 +170,17 @@ const NewRoom = () => {
               id="room_type_field"
               name="category"
               value={category}
-              onChange={onChange}>
-              {["King", "Single", "Twins"].map((value) => (
+              onChange={onChange}
+            >
+              {[
+                "Single",
+                "Deluxe",
+                "Quad",
+                "Triple",
+                "Twins",
+                "King",
+                "Connected",
+              ].map((value) => (
                 <option key={value} value={value}>
                   {value}
                 </option>
@@ -187,7 +198,8 @@ const NewRoom = () => {
                 id="guest_field"
                 name="guestCapacity"
                 value={guestCapacity}
-                onChange={onChange}>
+                onChange={onChange}
+              >
                 {[1, 2, 3, 4, 5, 6].map((num) => (
                   <option key={num} value={num}>
                     {num}
@@ -205,7 +217,8 @@ const NewRoom = () => {
                 id="numofbeds_field"
                 name="numOfBeds"
                 value={numOfBeds}
-                onChange={onChange}>
+                onChange={onChange}
+              >
                 {[1, 2, 3].map((num) => (
                   <option key={num} value={num}>
                     {num}
@@ -236,7 +249,8 @@ const NewRoom = () => {
           <button
             type="submit"
             className="btn form-btn w-100 py-2"
-            disabled={isLoading}>
+            disabled={isLoading}
+          >
             {isLoading ? <ButtonLoader /> : "CREATE"}
           </button>
         </form>
