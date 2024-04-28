@@ -42,6 +42,17 @@ export const bookingApi = createApi({
         };
       },
     }),
+
+    editBooking: builder.mutation({
+      query({ id, body }) {
+        return {
+          url: `/bookings/edit/${id}`,
+          method: "PUT",
+          body,
+        };
+      },
+
+    }),
   }),
 });
 
@@ -51,4 +62,5 @@ export const {
   useGetBookedDatesQuery,
   useLazyGetSalesStatsQuery,
   useDeleteBookingMutation,
+  useEditBookingMutation
 } = bookingApi;

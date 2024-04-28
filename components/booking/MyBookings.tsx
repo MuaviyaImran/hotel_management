@@ -65,7 +65,17 @@ const MyBookings = ({ data }: Props) => {
         daysOfStay: booking.daysOfStay,
         actions: (
           <>
-            <Link href={`/bookings/${booking._id}`} className="btn btn-primary">
+            <Link
+              href={`/bookings/edit/${booking._id}`}
+              className="btn btn-outline-primary"
+            >
+              {" "}
+              <i className="fa fa-pencil"></i>{" "}
+            </Link>
+            <Link
+              href={`/bookings/${booking._id}`}
+              className="btn ms-2 btn-primary"
+            >
               <i className="fa fa-eye"></i>
             </Link>{" "}
             <Link

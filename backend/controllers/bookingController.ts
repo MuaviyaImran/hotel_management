@@ -4,6 +4,7 @@ import Booking, { IBooking } from "../models/booking";
 import Moment from "moment";
 import { extendMoment } from "moment-range";
 import ErrorHandler from "../utils/errorHandler";
+import mongoose from "mongoose";
 
 const moment = extendMoment(Moment);
 
@@ -277,6 +278,26 @@ export const deleteBooking = catchAsyncErrors(
 
     return NextResponse.json({
       success: true,
+    });
+  }
+);
+
+export const editBooking = catchAsyncErrors(
+  async (req: NextRequest, { params }: { params: { id: string } }) => {
+    let booking = await Booking.findById(params.id);
+    const body = await req.json();
+
+    if (!booking) {
+      throw new ErrorHandler(404, "Room not found with this ID");
+    }
+
+    booking.checkInDate = body.checkInDate;
+    booking.checkOutDate = body.checkOutDate;
+
+    await booking.save();
+    return NextResponse.json({
+      success: true,
+      booking,
     });
   }
 );
